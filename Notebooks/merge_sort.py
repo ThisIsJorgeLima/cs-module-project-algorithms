@@ -38,3 +38,66 @@ def merge_sort(arr):
         arr = merge(left, right)
 
     return arr
+
+# +----------------------------------------------+
+# optimizing space *****
+# UPER Model
+# UNP and go back and write the code
+# Final step is optimization
+
+
+def merge_in_place(arr, start, mid, end):
+    # left_array = arr[start:mid]
+    # right_array = arr[mid:end]
+
+    start_two = mid + 1
+
+    if arr[mid] <= arr[start_two]:
+        return arr  # its already merged
+# set up our two pointers
+    while start <= mid and start_two <= end:
+        if arr[start] <= arr[start_two]:  # punctionation
+            start = + 1  # increment start
+        else:
+            value = arr[start_two]
+            index = start_two
+
+        # shift all of the elements
+        # set the index minus 1 shifts to the right
+
+            while index != start:  # != is not equal too
+                arr[index] = arr[index - 1]
+                index -= 1
+
+            arr[start] = value
+
+            # update all of our pointers
+            # increment start
+            start += 1
+            # increment mid
+            mid += 1
+            # increment start_two
+            start_two += 1
+
+    return arr
+
+# +----------------------------------------------+
+
+    # index
+
+
+def merge_sort_in_place(arr, left, right):
+
+    if right - left > 1:
+
+        mid = (left+right)//2
+        # recursive
+        merge_sort_in_place(arr, left, mid)
+        merge_sort_in_place(arr, mid+1, right)
+        merge_in_place(arr, left, mid, right)
+
+    return arr
+
+    arr = [1, 5, 8, 4, 2, 9, 6, 0, 3, 7]
+    merge_sort_in_place(arr,  0, len(arr))
+    print(arr)
