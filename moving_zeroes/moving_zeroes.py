@@ -8,11 +8,13 @@ Returns: a List of integers
 
 def moving_zeroes(arr):
     zeros__at_end = 0
+    # iteratoring our while loop
     while zeros__at_end < len(arr):
         if max(arr[zeros__at_end:]) == 0 and min(arr[zeros__at_end:]) == 0:
-            break  # if so lets stop our loop
+            break  # iterator to stop our loop
         if arr[zeros__at_end] == 0:
-            arr.append(arr.pop(zeros__at_end))
+            arr.append(arr.pop(zeros__at_end))  # if this index = zero
+            continue  # iterator to carry on:
         zeros__at_end += 1
         # return value:
     return arr

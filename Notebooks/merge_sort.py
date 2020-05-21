@@ -1,3 +1,8 @@
+"""
+🄼🄴🅁🄶🄴
+"""
+
+
 def merge(A, B):
     # init the combined list that will hold the sorted elements from both A and B
     # combined = [0] * (len(A) + len(B))
@@ -27,6 +32,11 @@ def merge(A, B):
         b += 1
 
     return combined
+
+
+"""
+🄼🄴🅁🄶🄴 🅂🄾🅁🅃
+"""
 
 
 def merge_sort(arr):

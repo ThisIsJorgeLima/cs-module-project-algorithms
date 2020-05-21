@@ -6,7 +6,6 @@ Returns: an integer
 
 def eating_cookies(n):
     '''
-    Naive recursive brute-force solution
     O(3^n) time, O(3^n) space
     '''
     if n < 0:
