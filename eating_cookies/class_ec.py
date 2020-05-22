@@ -57,6 +57,7 @@ represents Cookie Monster eating three cookies:
     # return eating_cookies(n-1) + eating_cookies(n-2) + eating_cookies(n-3)
     # print(eating_cookies(5))
 print(eating_cookies(999))
+
 """
         Here's another explanation of why we're adding three recursive calls:
     """
